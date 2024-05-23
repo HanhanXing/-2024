@@ -28,3 +28,33 @@
 
 ## Markovify
 简介：是一个简单易用的 Python 库,用于基于马尔可夫链生成随机文本。投喂大量文本之后，它会模仿文风生成随机的语句就是了。
+
+
+## pyenv
+简介：核心功能就是可以让你在**多个 Python 版本**之间轻松**切换**。官网简介是“Simple Python Version Management: pyenv（Python 版本管理工具）”。  
+- 用它安装的python，跟系统自带的、从python官网安装的、或者通过homebrew install安装的python会在不同的路径里，且相互独立存在。  
+- 先有的rbenv，再有的pyenv这个python特调版本。  
+- 常用的命令：`pyenv install 3.11.2`, `pyenv global 3.11.2`, `pyenv rehash`  
+网址：  
+- 主页：https://github.com/pyenv/pyenv/blob/master/README.md
+- Commends命令目录：https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-rehash
+
+## rbenv (和ruby-build)
+简介：接上条，核心功能是在mac上管理**多个版本的ruby**，即“rbenv is a version manager tool”。   
+- 用它安装的ruby才可以被它所管理。且跟系统自带的、ruby官网安装的、homebrew安装的ruby版本同时独立存在于电脑中。
+- 原理：只要rbenv在PATH里成功植入，那本台电脑的全局上，每次调用`ruby`, `gem`, `bundler`这些命令时，会默认1)先激活rbenv，2)然后rbenv在目前所在的项目路径project directory中检索一个名为`.ruby-version`的文件，3)如果有此文件，rbenv会根据文件里指认的ruby版本调用已安装好的ruby某某版在此directory中。
+- 常用命令：
+  - choose the Ruby version for your project with, for example:
+    ```  
+      cd myproject
+      #choose Ruby version 3.1.2
+      rbenv local 3.1.2  
+      #这段命令执行完后会在本次所在的directory中创建或更新“ruby-version”这个文件。  
+    ```
+  - 用rbenv安装ruby：
+    ```
+    #举个例子安装最新版本的ruby
+    rbenv install 3.3.1
+    #查询目前可安装的最新稳定ruby版本列表
+    rbenv install -l
+    ```
