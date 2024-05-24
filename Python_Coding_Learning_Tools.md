@@ -42,6 +42,7 @@
 ## rbenv (和ruby-build)
 简介：接上条，核心功能是在mac上管理**多个版本的ruby**，即“rbenv is a version manager tool”。   
 - 用它安装的ruby才可以被它所管理。且跟系统自带的、ruby官网安装的、homebrew安装的ruby版本同时独立存在于电脑中。
+- 经验总结：rbenv的GitHub主页很简略，实际上建议参考pyenv的GitHub主页里的安装步骤来操作会更好（尤其是`-init`初始化的过程，基本要复刻puenv主页里的步骤才有效果）。
 - 原理：只要rbenv在PATH里成功植入，那本台电脑的全局上，每次调用`ruby`, `gem`, `bundler`这些命令时，会默认1)先激活rbenv，2)然后rbenv在目前所在的项目路径project directory中检索一个名为`.ruby-version`的文件，3)如果有此文件，rbenv会根据文件里指认的ruby版本调用已安装好的ruby某某版在此directory中。
 - 常用命令：
   - choose the Ruby version for your project with, for example:
@@ -54,7 +55,8 @@
   - 用rbenv安装ruby：
     ```
     #举个例子安装最新版本的ruby
-    rbenv install 3.3.1
+    rbenv install 3.2.4
     #查询目前可安装的最新稳定ruby版本列表
     rbenv install -l
-    ```
+    ```  
+网址：https://github.com/rbenv/rbenv
