@@ -60,3 +60,8 @@
     rbenv install -l
     ```  
 网址：https://github.com/rbenv/rbenv
+
+## git的本地命令官方reference（在terminal中使用的）
+简介：用来替换vscode自带的‘源代码管理器’功能，直接在terminal中写命令似乎有的时候会更加直接和高效。例如
+网址：https://git-scm.com/docs/git#_git_commands
+还有，有空上个小网课学习一下也行：[`Udacity Git课程：一个免费的互动式在线课程，帮助你快速掌握Git的基本操作。`](https://www.udacity.com/course/version-control-with-git--ud123)
