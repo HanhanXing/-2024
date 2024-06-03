@@ -16,18 +16,27 @@
 简介：一个python的自然语言处理工具库【库，需要安装，为了安装它我还因此安装了pipenv这个库来搭建虚拟环境】
 网址：https://www.nltk.org/
 
-## Pipenv
-简介：“Python Dev Workflow for Humans”，我个人理解来说，它就是用于管理python虚拟环境和对应环境下依赖关系管理的一个工具。
-    我的电脑上是通过brew来安装的pipenv（自动部署了，不像用pip或pip3来安装那样需要绑定在系统中某个版本的Python里【似乎如此】）。
-    我只需记得：
-    在虚拟环境激活状态下,运行 exit 命令或按下 Ctrl+D。
-    在项目目录下运行 pipenv shell 命令。
-    pipenv --rm 可以删除当前项目的 Pipenv 虚拟环境。
-    pipenv install --python 3.8 可以指定使用 Python 3.8 版本创建虚拟环境。
-网址：https://docs.python-guide.org/dev/virtualenvs/
-
 ## Markovify
 简介：是一个简单易用的 Python 库,用于基于马尔可夫链生成随机文本。投喂大量文本之后，它会模仿文风生成随机的语句就是了。
+
+## Pipenv  
+简介：“Python Dev Workflow for Humans”，我个人理解来说，它就是用于管理python虚拟环境和对应环境下依赖关系管理的一个工具。  
+网址：https://docs.python-guide.org/dev/virtualenvs/  
+1. 我的电脑上是通过**brew**来安装的pipenv（**自动部署**了，不像用pip或pip3来安装那样需要绑定在系统中某个版本的Python里【似乎如此】）。
+1. 我只需记得**常用命令**：
+   - 在虚拟环境激活状态下,运行 `exit` 命令或按下 Ctrl+D。
+   - 在项目目录下运行 `pipenv shell` 命令。
+   - `pipenv --rm` 可以删除当前项目的 Pipenv 虚拟环境。
+   - `pipenv install --python 3.8` 可以指定使用 Python 3.8 版本创建虚拟环境（但前提是本地机器里有py3.8？）。
+   - `pip freeze > requirements.txt`生成一个包含所有依赖的文件.
+   - ``在本virtual env中安装项目需要的依赖的文件。
+1. **为什么要用pipenv**给项目创建虚拟环境？  
+**核心**：即**用于安装*第三方库python library***到（to）*virtual env* 而不是 *系统全局*，这对于管理Python项目有几个关键的好处：
+- 隔离依赖：每个Python项目可能需要不同版本的第三方库。使用虚拟环境可以避免版本冲突。如果所有项目都使用系统全局环境，一个项目更新了某个库的版本，可能会破坏依赖于该库旧版本的其他项目。
+- 保持系统整洁：随着时间的推移，如果在全局环境中安装了许多库，你的系统可能会变得杂乱无章，很难跟踪哪些是当前项目需要的，哪些是过去遗留的。虚拟环境允许你仅为当前工作的项目安装所需的包。
+- 易于维护：使用虚拟环境，你可以通过简单的**`pip freeze > requirements.txt`**来生成一个包含所有依赖的文件，这使得在不同机器或环境中复制项目变得非常简单。
+- 清理简单：当一个项目完成或者不再需要时，你可以简单地删除对应的虚拟环境文件夹，而不用担心会影响到系统环境或其他项目。
+- 性能问题：虚拟环境对电脑的性能几乎没有影响。电脑变卡通常是因为CPU或内存资源被大量消耗，而虚拟环境中的库只有在被激活并使用时才可能消耗资源。
 
 
 ## pyenv
