@@ -67,7 +67,8 @@
 还有，有空上个小网课学习一下也行：[`Udacity Git课程：一个免费的互动式在线课程，帮助你快速掌握Git的基本操作。`](https://www.udacity.com/course/version-control-with-git--ud123)
 
 
-## 关于GitHub Pages上可以使用的Jekyll（一个ruby的gem，for网页制作）主题themes合集：
+## 使用Jekyll主题Themes（例如，minima）
+关于GitHub Pages上可以使用的Jekyll（一个ruby的gem，for网页制作）主题themes合集：
 网址：https://pages.github.com/themes/
 - 常用：[`正在使用的：minima`](https://github.com/jekyll/minima)
       - **使用：必须从GitHub上克隆整个仓库到本地**，因为minima在ruby.org上只更新到2.5.1版本，但实际上在GitHubPages上用的是3.0版本了，所以无法在本地通过bundle install或者gem install安装到3.0版本及以上的依赖包。
