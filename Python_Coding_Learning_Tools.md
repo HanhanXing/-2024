@@ -65,3 +65,12 @@
 简介：用来替换vscode自带的‘源代码管理器’功能，直接在terminal中写命令似乎有的时候会更加直接和高效。例如
 网址：https://git-scm.com/docs/git#_git_commands
 还有，有空上个小网课学习一下也行：[`Udacity Git课程：一个免费的互动式在线课程，帮助你快速掌握Git的基本操作。`](https://www.udacity.com/course/version-control-with-git--ud123)
+
+
+## 关于GitHub Pages上可以使用的Jekyll（一个ruby的gem，for网页制作）主题themes合集：
+网址：https://pages.github.com/themes/
+- 常用：[`正在使用的：minima`](https://github.com/jekyll/minima)
+      - **使用：必须从GitHub上克隆整个仓库到本地**，因为minima在ruby.org上只更新到2.5.1版本，但实际上在GitHubPages上用的是3.0版本了，所以无法在本地通过bundle install或者gem install安装到3.0版本及以上的依赖包。
+      - **经历过的错误**：minima3.0的特色就是主页直接显示所有posts（跟使用的版本有关，跟_config.yml或者Gemfile里的设置基本无关。
+      - minima看似极简，其实反而是众多themes里面架构最复杂的。
+- 备用：[`商务感：cayman`](https://github.com/pages-themes/cayman)和[`私人博客感：hacker`](https://github.com/pages-themes/hacker)
