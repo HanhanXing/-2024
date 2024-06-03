@@ -71,7 +71,7 @@
 关于GitHub Pages上可以使用的Jekyll（一个ruby的gem，for网页制作）主题themes合集：
 网址：https://pages.github.com/themes/
 - 常用：[`正在使用的：minima`](https://github.com/jekyll/minima)
-      - **使用：必须从GitHub上克隆整个仓库到本地**，因为minima在ruby.org上只更新到2.5.1版本，但实际上在GitHubPages上用的是3.0版本了，所以无法在本地通过bundle install或者gem install安装到3.0版本及以上的依赖包。
-      - **经历过的错误**：minima3.0的特色就是主页直接显示所有posts（跟使用的版本有关，跟_config.yml或者Gemfile里的设置基本无关。
-      - minima看似极简，其实反而是众多themes里面架构最复杂的。
+    - **使用：必须从GitHub上克隆整个仓库到本地**，因为minima在ruby.org上只更新到2.5.1版本，但实际上在GitHubPages上用的是3.0版本了，所以无法在本地通过bundle install或者gem install安装到3.0版本及以上的依赖包。
+    - **经历过的错误**：minima3.0的特色就是主页直接显示所有posts（跟使用的版本有关，跟_config.yml或者Gemfile里的设置基本无关。
+    - minima看似极简，其实反而是众多themes里面架构最复杂的。
 - 备用：[`商务感：cayman`](https://github.com/pages-themes/cayman)和[`私人博客感：hacker`](https://github.com/pages-themes/hacker)
