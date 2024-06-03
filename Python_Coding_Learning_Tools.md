@@ -27,9 +27,14 @@
    - 在虚拟环境激活状态下,运行 `exit` 命令或按下 Ctrl+D。
    - 在项目目录下运行 `pipenv shell` 命令。
    - `pipenv --rm` 可以删除当前项目的 Pipenv 虚拟环境。
-   - `pipenv install --python 3.8` 可以指定使用 Python 3.8 版本创建虚拟环境（但前提是本地机器里有py3.8？）。
-   - `pip freeze > requirements.txt`生成一个包含所有依赖的文件.
-   - ``在本virtual env中安装项目需要的依赖的文件。
+   - `pipenv install --python 3.11` 可以**指定使用 Python3.11版本**创建虚拟环境（但前提是系统里有py3.11，否则pipenv不会自动下载安装Python）。
+   - `pipenv install` 在本virtual env中**安装**项目需要的**依赖**。
+        - `pipenv install ‘xxx’`命令仅用于安装依赖包（python library）而已。
+   - `pipenv install -r ...PATH.../requirements.txt` 在本virtual env中**批量安装 requirements.txt 文件中列出的所有依赖包**。
+       - 其中`-r`的意思就是`--requirement`的缩写，表示从文件中读取依赖项。
+       - 常规的命令是`pipenv install -r requirements.txt`（此情形一般是requirement文件与Pipfile和Pipfile.lock在*同一个根目录路径*下时）
+       - 这个命令相当于在传统的 pip 命令中使用的 pip install -r requirements.txt，用于**批量安装 requirements.txt 文件中列出的所有包**。
+   - `pip freeze > requirements.txt`生成一个包含所有依赖的文件.  
 1. **为什么要用pipenv**给项目创建虚拟环境？  
 **核心**：即**用于安装*第三方库python library***到（to）*virtual env* 而不是 *系统全局*，这对于管理Python项目有几个关键的好处：
 - 隔离依赖：每个Python项目可能需要不同版本的第三方库。使用虚拟环境可以避免版本冲突。如果所有项目都使用系统全局环境，一个项目更新了某个库的版本，可能会破坏依赖于该库旧版本的其他项目。
