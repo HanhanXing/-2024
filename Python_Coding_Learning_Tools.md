@@ -92,7 +92,7 @@
 
 
 ## BERT
-指的是**BERT模型**，一种预训练的双向Transformer模型，使用[`掩码语言模型（Masked Language Model, MLM）`](#Masked-Language-Model-MLM)进行训练。[`HuggingFace的官方教程`](#Hugging-Face)里有对他的科普.
+指的是**BERT模型**，一种预训练的双向Transformer模型，使用[`掩码语言模型（Masked Language Model, MLM）`](#Masked-Language-Model(MLM))进行训练。[`HuggingFace的官方教程`](#Hugging-Face)里有对他的科普.
 
 ## Transformer架构
 一个典型的训练架构，包括自注意力机制（self-attention）和多头注意力机制（multi-head attention）。
