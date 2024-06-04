@@ -89,3 +89,18 @@
     - **经历过的错误**：minima3.0的特色就是主页直接显示所有posts（跟使用的版本有关，跟_config.yml或者Gemfile里的设置基本无关。
     - minima看似极简，其实反而是众多themes里面架构最复杂的。
 - 备用：[`商务感：cayman`](https://github.com/pages-themes/cayman)和[`私人博客感：hacker`](https://github.com/pages-themes/hacker)
+
+
+## BERT
+指的是**BERT模型**，一种预训练的双向Transformer模型，使用[`掩码语言模型（Masked Language Model, MLM）`](# Masked Language Model (MLM))进行训练。[`HuggingFace的官方教程`](# Hugging Face)里有对他的科普.
+
+## Transformer架构
+一个典型的训练架构，包括自注意力机制（self-attention）和多头注意力机制（multi-head attention）。
+
+## 注意力机制 Attention Mechanism
+用于理解文本中的重要信息，帮助模型关注相关的词。AIwPY课程的最后一个project里有涉及。
+
+## Masked Language Model (MLM)
+通过预测被遮蔽 [MASK] 的词来训练语言模型。
+
+
